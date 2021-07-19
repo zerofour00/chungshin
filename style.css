@@ -9,23 +9,26 @@
     line-height: 50px;
     font-size: 20px;
     margin-top: 5px;
+    transition: 0.5s
 }
 #check1:checked ~ .container {
     background-color: rgb(250, 236, 249);
 }
-#check1, #check2 {
+#check1, 
+#check2,
+#check3 {
     display: none;
 }
-.menu1, .menu2 {
+/* .menu1,
+.menu2,
+.menu3 {
     display: none;
-}
-#check1:checked ~ .menu1{
-    display: block;
-}
+} */
+
 .menu-item {
     display: block;
     width: 200px;
-    height: 40px;
+    height: 0;
     background-color:lavender;
     margin-top: 2px;
     color: #ffffff;
@@ -33,9 +36,28 @@
     line-height: 35px;
     text-decoration: none;
     user-select: none;
+    transition: 1s;
+    color: transparent;
+    font-size: 20;
 }
-#check2:checked ~ .menu2{
+
+#check1:checked ~ .menu1 > .menu-item{
     display: block;
+    height: 35px;
+    color: #fff;
+    font-size: 15px;
+}
+#check2:checked ~ .menu2 > .menu-item{
+    display: block;
+    height: 35px;
+    color: #fff;
+    font-size: 15px;
+}
+#check3:checked ~ .menu3 > .menu-item{
+    display: block;
+    height: 35px;
+    color: #fff;
+    font-size: 15px;
 }
 
 .wrapper {
