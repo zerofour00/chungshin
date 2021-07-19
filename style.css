@@ -1,0 +1,47 @@
+.container {
+    display: block;
+    width: 200px;
+    height: 50px;
+    background-color:rgb(240, 209, 240);
+    user-select: none;
+    color: #ffffff;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    margin-top: 5px;
+}
+#check1:checked ~ .container {
+    background-color: rgb(250, 236, 249);
+}
+#check1, #check2 {
+    display: none;
+}
+.menu1, .menu2 {
+    display: none;
+}
+#check1:checked ~ .menu1{
+    display: block;
+}
+.menu-item {
+    display: block;
+    width: 200px;
+    height: 40px;
+    background-color:lavender;
+    margin-top: 2px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+    text-decoration: none;
+    user-select: none;
+}
+#check2:checked ~ .menu2{
+    display: block;
+}
+
+.wrapper {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
