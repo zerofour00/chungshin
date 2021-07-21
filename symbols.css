@@ -1,8 +1,9 @@
 body{
     margin-top: 50px;
     box-sizing: border-box;
-    font-family: 'Noto Serif KR', serif;
+    font-family: 'Noto Sans KR', sans-serif;
 }
+
 
 .container {
     box-shadow: 0 0 10px #333;
@@ -105,4 +106,12 @@ body{
     font-size: 30px;
     color: #b980b3;
     font-weight: bold;
+}
+#tab1,
+#tab2,
+#tab3,
+#tab4,
+#tab5,
+#tab6 {
+    display: none;
 }

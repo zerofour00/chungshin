@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading animation</title>
+</head>
+    <style>
+        .mom {
+            display: flex
+        }
+        .dot {
+            width: 40px;
+            height: 40px;
+            background-color:salmon;
+            list-style: none;
+            border-radius: 50%;
+            margin: 20px;
+            animation: dot 1s ease-in-out infinite alternate-reverse;
+        }
+        .dot:nth-child(1) {
+            animation-delay: .2s;
+        }
+        .dot:nth-child(2) {
+            animation-delay: .4s;
+        }
+        .dot:nth-child(3) {
+            animation-delay: .6s;
+        }
+        .dot:nth-child(4) {
+            animation-delay: .8s;
+        }
+        .dot:nth-child(5) {
+            animation-delay: 1s;
+        }
+
+        @keyframes dot {
+            0%{
+                transform: scale(.3);
+                background-color: yellow;
+            }
+            100%{
+                transform:scale(1);
+            }
+        }
+    </style>
+<body>
+    <div class="container">
+        <ul class="mom">
+            <li class="dot"></li>
+            <li class="dot"></li>
+            <li class="dot"></li>
+            <li class="dot"></li>
+            <li class="dot"></li>
+        </ul>
+    </div>
+</body>
+</html>

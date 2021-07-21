@@ -1,0 +1,92 @@
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.bold-text,
+.logo {
+    display: none;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 95vh;
+}
+.main-text {
+    width: 90%;
+    max-width: 350px;
+    color: #333;
+    font-size: 12px;
+    user-select: none;
+}
+.background {
+    position: absolute;
+    z-index: -1;
+    width: 90%;
+    height: 100%;
+    max-width: 450px;
+    background: no-repeat center url('img/시작문구배경.png');
+    background-size: contain;
+    transition: 1s;
+}
+.next1 {
+    margin-top: 20px;
+}
+
+.next1,
+.next2,
+.next3 {
+    width: 80px;
+    height: 35px;
+    background-color: #fff;
+    color: rgb(212, 130, 219);
+    border-radius: 10px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.5);
+    font-size: 10px;
+    text-align: center;
+    line-height: 35px;
+    cursor: pointer;
+    user-select: none;
+    bottom: 270px;
+    left: 318px;
+    position: absolute;
+    /* bottom: calc(50vh -240vh);
+    right: calc(50vw- 150px); */
+}
+
+.next2,
+.next3 {
+    display: none;
+}
+
+#tab1:checked ~ .container >  .main-text,
+#tab1:checked ~ .container > .buttons > .next1 {
+    display: none;
+}
+#tab1:checked ~ .container > .bold-text,
+#tab1:checked ~ .container > .buttons > .next2 {
+    display: block;
+    animation: bgAppear 1.5s linear;
+}
+#tab2:checked ~ .container > .bold-text,
+#tab2:checked ~ .container > .buttons > .next2 {
+    display: none;
+}
+#tab2:checked ~ .container > .buttons > a > .next3,
+#tab2:checked ~ .container > .logo{
+    display: block;
+    animation: bgAppear 1.5s linear;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+}
+@keyframes bgAppear {
+    0%{
+        opacity: 0;
+    }    
+    100%{
+        opacity: 1;
+    }
+}
